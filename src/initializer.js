@@ -156,7 +156,7 @@ function setupWithEncryption(id, mode, key, alias) {
 }
 
 function encryptionHandler(id, mode) {
-  alias = IDStore.getAlias(id);
+  const alias = IDStore.getAlias(id);
   if (IDStore.encrypted(id)) {
     let exists = global.secureKeyExists(alias);
     if (exists) {
